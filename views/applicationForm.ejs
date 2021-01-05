@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <title>Application Form</title>
+
+</head>
+<body >
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">AG Company</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link " aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/">Application Form</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <div class="row">
+        <div class="container mb-3 col-10 offset-1 ">
+            <div class="row">
+                <h1 class=" text-center mb-4">Job Application</h1>
+                <div class="image col-md-6">
+                    <img src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signin-image.jpg" >
+                </div>
+                <div class="col-md-6">
+                    <form action="/applications" method="POST" id="job" class=" needs-validation mt-3 mb-3" novalidate >
+                        <div class="mb-3">
+                            <label class="form-label" for="firstName">First Name</label>
+                            <input class = "form-control" type="text" id="firstName" name="application[firstName]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label" for="lastName">Last Name</label>
+                            <input class = "form-control" type="text" id="lastName" name="application[lastName]" required >
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                        </div>
+                
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Email</label>
+                            <input class = "form-control" type="email" id="email" name="application[email]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                        </div>
+            
+                        <div class="mb-3">
+                            <label class="form-label" for="degree">Degree</label>
+                            <input class = "form-control" type="text" id = "degree" name="application[degree]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="skills">Skills</label>
+                            <input class = "form-control" type="text" id = "skills" name="application[skills]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="experience">Experience(if any)</label>
+                            <textarea class="form-control" name="application[experience]" type="text" id="experience" ></textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                        </div>  
+                        <div class="mb-3">
+                            <label class="form-label" for="achievements">Achievements(if any)</label>
+                            <textarea class="form-control" name="application[achievements]" type="text" id="achievements" ></textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                        </div>    
+                        <div class="mb-3 ">
+                            <button class="btn btn-success" >Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous">
+    </script>
+    <script>
+        (function () {
+          'use strict'
+        
+          var forms = document.querySelectorAll('.needs-validation')
+        
+          Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+        
+                form.classList.add('was-validated')
+              }, false)
+            })
+        })()</script>
+</body>
+</html>
